@@ -102,6 +102,6 @@ public class BookController {
 	public ResponseEntity<String> deleteBook(Book book, User user, @RequestParam Integer bookId, @RequestParam String username, @RequestParam String key) {
 		String deletedBook = bookService.deleteBook(book, user, bookId, username, key);
 		
-		return new ResponseEntity<>(deletedBook, HttpStatus.MOVED_PERMANENTLY);
+		return new ResponseEntity<>(deletedBook, HttpStatus.OK);
 	}
 }
