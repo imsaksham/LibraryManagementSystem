@@ -68,6 +68,6 @@ public class UserController {
 	public ResponseEntity<String> deleteUser(User user, @RequestParam String username, @RequestParam String key) {
 		String deletedUser = userService.deleteUser(user, username, key);
 		
-		return new ResponseEntity<>(deletedUser, HttpStatus.MOVED_PERMANENTLY);
+		return new ResponseEntity<>(deletedUser, HttpStatus.OK);
 	}
 }
